@@ -28,34 +28,6 @@ const validateLogin = [
   },
 ];
 
-// Admin validations
-const validateAdminSignup = [
-  body("adminId").notEmpty().withMessage("Admin ID is required"),
-  body("username").isEmail().withMessage("Username must be a valid email"),
-  body("password")
-    .equals("admin")
-    .withMessage("Admin password must be 'admin'"),
-  (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-    next();
-  },
-];
-
-const validateAdminLogin = [
-  body("username").isEmail().withMessage("Username must be a valid email"),
-  body("password").notEmpty().withMessage("Password is required"),
-  (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-    next();
-  },
-];
-
 // Item validations
 const validateItem = [
   body("name").notEmpty().withMessage("Item name is required"),

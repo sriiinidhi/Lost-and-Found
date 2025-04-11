@@ -19,14 +19,11 @@ const errorHandler = require("./middleware/errorHandler");
 const {
   validateSignup,
   validateLogin,
-  validateAdminSignup,
-  validateAdminLogin,
   validateItem,
   validateClaimant,
   validateHelper,
 } = require("./middleware/validationMiddleware");
 // const adminController = require("./routes/adminController");
-const adminRoutes = require("./routes/adminController");
 
 
 // Create an express app
@@ -73,12 +70,6 @@ app.put("/helper/:id", validateHelper, helperController.updateHelper);
 app.get("/helper", helperController.fetchHelpers);
 app.get("/helper/:id", helperController.fetchHelper);
 app.delete("/helper/:id", helperController.deleteHelper);
-
-// app.post("/admin/signup", validateAdminSignup, adminController.signup);
-// app.post("/admin/login", validateAdminLogin, adminController.login);
-// app.get("/admin/logout", adminController.logout);
-app.use("/admin", adminRoutes);
-
 
 
 app.use(errorHandler);

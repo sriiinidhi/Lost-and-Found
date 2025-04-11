@@ -37,9 +37,6 @@ const DisplayCardClaimer = ({ claimant, number }) => {
       <p>
         <strong>Proof of Claim:</strong> {proofofclaim}
       </p>
-      <p>
-        <strong>Date:</strong> {new Date(date).toLocaleString()}
-      </p>
     </div>
   );
 };

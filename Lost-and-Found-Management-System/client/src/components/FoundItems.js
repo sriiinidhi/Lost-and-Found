@@ -37,7 +37,7 @@ const FoundItems = (props) => {
   };
 
   const btnStyleSubmit = {
-    backgroundColor: "fe5c5c",
+    backgroundColor: "#fe5c5c",
     color: "white",
     padding: "8px 15px",
     borderRadius: "5px",

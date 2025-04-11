@@ -12,8 +12,6 @@ import PersonalItems from "./components/PersonalItems";
 import "./App.css";
 import { useSelector } from "react-redux";
 import { selectUser } from "./utils/userSlice";
-import AdminSignup from "./components/AdminSignup";
-import AdminSignin from "./components/AdminSignin";
 
 const App = () => {
   const user = useSelector(selectUser);
@@ -25,8 +23,6 @@ const App = () => {
         <Route path="/home" element={<HomePage />} />
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/sign-up" element={<Signup />} />
-        <Route path="/admin-signup" element={<AdminSignup />} />
-        <Route path="/admin-sign-in" element={<AdminSignin />} />
         <Route path="/raise-a-concern" element={<LostAndFoundForm />} />
         <Route
           path="/all-items"

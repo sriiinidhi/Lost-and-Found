@@ -149,14 +149,6 @@ function Signup() {
             {loading ? <Spinner /> : "Sign Up"}{" "}
             {/* Show Spinner component when loading */}
           </button>
-          <p className="btn-spread">admin?</p>
-          <button
-           type="button"
-           className="submit-button"
-           onClick={() => navigate("/admin-signup")}
-          >
-            {loading ? <Spinner /> : "Sign Up as admin"}{" "}
-          </button>
         </form>
       </div>
     </>

@@ -27,9 +27,7 @@ const DisplayCardHelper = ({ helper, number }) => {
       <p>
         <strong>Hostel Name:</strong> {hostelname}
       </p>
-      <p>
-        <strong>Date:</strong> {new Date(date).toLocaleString()}
-      </p>
+      
     </div>
   );
 };
